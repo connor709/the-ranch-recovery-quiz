@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Ranch | Free Recovery Assessment</title>
+    <meta name="description" content="Take a free confidential assessment to find the right treatment path. The Ranch offers compassionate, evidence-based addiction recovery programs.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope,+sans-serif:wght@400;600;400&family=Manrope,+sans-serif:wght@400;600;600&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Manrope, sans-serif', system-ui, sans-serif;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 25px;
+            color: #333;
+            background: #fff;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Manrope, sans-serif', system-ui, sans-serif;
+            font-weight: 600;
+            color: #676767;
+            line-height: 1.2;
+        }
+
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+        /* (top-bar removed — no fake phone numbers) */
+
+        /* === HEADER === */
+        header {
+            background: #fff;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+        }
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+        }
+        .logo {
+            height: 48px;
+            max-width: 200px;
+            object-fit: contain;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        /* (header-phone removed — no fake numbers) */
+        .header-cta {
+            background: #676767;
+            color: #ffffff;
+            padding: 10px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s, transform 0.15s;
+            white-space: nowrap;
+        }
+        .header-cta:hover {
+            background: #525252;
+            transform: translateY(-1px);
+        }
+
+        /* === HERO === */
+        .hero {
+            background: linear-gradient(160deg, #676767 0%, #857d6b 50%, #5a818a 100%);
+            padding: 80px 0;
+            
+        }
+        .hero-inner {
+            max-width: 720px;
+            margin: 0 auto; text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(28px, 5vw, 44px);
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        .hero .subtitle {
+            font-size: clamp(16px, 2.5vw, 19px);
+            color: #ffffff;
+            opacity: 0.88;
+            margin-bottom: 32px;
+            line-height: 1.6;
+            max-width: 600px;
+            margin-left: auto; margin-right: auto;
+        }
+        .hero-cta {
+            display: inline-block;
+            background: #ffffff;
+            color: #676767;
+            padding: 14px 36px;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+        }
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+        }
+        .hero-checks {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 28px;
+            justify-content: center;
+        }
+        .hero-check {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+            color: #ffffff;
+            opacity: 0.9;
+        }
+        .hero-check svg { flex-shrink: 0; }
+        
+
+        /* === TRUST BAR === */
+        .trust-bar {
+            background: #fbf9f5;
+            padding: 18px 0;
+            border-bottom: 1px solid #f5f1e8;
+        }
+        .trust-items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 32px;
+            flex-wrap: wrap;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: #676767;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+        .trust-item svg { width: 18px; height: 18px; flex-shrink: 0; }
+
+        /* === SECTIONS === */
+        section { padding: 60px 0; }
+        .section-label {
+            text-transform: uppercase;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            color: #676767;
+            margin-bottom: 12px;
+        }
+        .section-heading {
+            font-size: clamp(24px, 4vw, 34px);
+            margin-bottom: 16px;
+        }
+        .section-subtext {
+            color: #666;
+            font-size: 17px;
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+        .section-center { text-align: center; }
+        .section-center .section-subtext { margin-left: auto; margin-right: auto; }
+
+        /* === PAIN POINTS === */
+        .pain-section { background: #eff6f8; }
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+            max-width: 800px;
+        }
+        .pain-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .pain-item p { font-size: 15px; color: #444; line-height: 1.6; }
+        .pain-check { width: 24px; height: 24px; flex-shrink: 0; margin-top: 2px; }
+
+        /* === QUIZ === */
+        .quiz-section { background: #fff; }
+        .quiz-container {
+            max-width: 640px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #e8e8e8;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+        .quiz-progress { height: 4px; background: #e8e8e8; }
+        .quiz-progress-fill {
+            height: 100%;
+            background: #676767;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+        .quiz-body { padding: 36px 28px; }
+        .quiz-step { font-size: 13px; color: #999; font-weight: 600; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 1px; }
+        .quiz-question { font-size: 21px; margin-bottom: 24px; color: #676767; }
+        .quiz-options { display: grid; gap: 10px; }
+        .quiz-option {
+            display: flex; align-items: center; gap: 12px;
+            padding: 14px 18px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.15s;
+            font-size: 15px;
+            background: #fff;
+        }
+        .quiz-option:hover { border-color: #676767; background: #ececec; }
+        .quiz-option.selected { border-color: #676767; background: #ececec; }
+        .quiz-option .dot {
+            width: 20px; height: 20px; border-radius: 50%;
+            border: 2px solid #ccc; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.15s;
+        }
+        .quiz-option.selected .dot { border-color: #676767; background: #676767; }
+        .quiz-option.selected .dot::after { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #fff; }
+
+        .quiz-cb { display: grid; gap: 8px; }
+        .quiz-cb-item {
+            display: flex; align-items: center; gap: 12px;
+            padding: 12px 16px; border: 2px solid #e0e0e0;
+            border-radius: 8px; cursor: pointer;
+            transition: all 0.15s; font-size: 15px;
+        }
+        .quiz-cb-item:hover { border-color: #676767; }
+        .quiz-cb-item.selected { border-color: #676767; background: #ececec; }
+        .quiz-cb-item .box {
+            width: 20px; height: 20px; border-radius: 4px;
+            border: 2px solid #ccc; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            transition: all 0.15s;
+        }
+        .quiz-cb-item.selected .box { border-color: #676767; background: #676767; }
+        .quiz-cb-item.selected .box::after { content: '\2713'; color: #fff; font-size: 13px; font-weight: 700; }
+
+        .quiz-nav { display: flex; justify-content: space-between; margin-top: 24px; gap: 12px; }
+        .btn { padding: 12px 28px; border-radius: 8px; border: none; font-size: 15px; font-weight: 600; cursor: pointer; transition: all 0.15s; }
+        .btn-back { background: #f0f0f0; color: #555; }
+        .btn-back:hover { background: #e4e4e4; }
+        .btn-next { background: #676767; color: #ffffff; margin-left: auto; }
+        .btn-next:hover { background: #525252; }
+        .btn-next:disabled { opacity: 0.4; cursor: not-allowed; }
+
+        /* Quiz results */
+        .quiz-result { text-align: center; padding: 36px 24px; }
+        .result-badge {
+            display: inline-block; padding: 5px 14px;
+            border-radius: 20px; font-size: 12px;
+            font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 16px;
+        }
+        .badge-hot { background: #fde8e8; color: #c0392b; }
+        .badge-warm { background: #fef3e2; color: #d35400; }
+        .badge-cold { background: #e8f6e9; color: #27ae60; }
+        .quiz-result h2 { font-size: 24px; margin-bottom: 12px; }
+        .quiz-result p { color: #555; margin-bottom: 20px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .result-cta {
+            display: inline-block;
+            background: #676767; color: #ffffff;
+            padding: 14px 36px; border-radius: 8px;
+            font-size: 17px; font-weight: 700;
+            text-decoration: none; transition: all 0.2s;
+        }
+        .result-cta:hover { background: #525252; transform: translateY(-1px); }
+        .result-sub { display: block; margin-top: 12px; font-size: 14px; color: #888; }
+        .result-sub a { color: #676767; font-weight: 600; text-decoration: none; }
+
+        /* === SERVICES === */
+        .services-section { background: #eff6f8; }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .service-card {
+            background: #fff; padding: 28px 24px;
+            border-radius: 10px;
+            border-left: 4px solid #676767;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+        .service-card:hover { transform: translateY(-3px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+        .service-card h3 { font-size: 18px; margin-bottom: 8px; }
+        .service-card p { color: #666; font-size: 15px; line-height: 1.6; margin-bottom: 12px; }
+        .service-link { color: #676767; font-size: 14px; font-weight: 600; text-decoration: none; }
+
+        /* === TESTIMONIALS === */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .testimonial {
+            background: #fff; padding: 28px;
+            border-radius: 10px;
+            border: 1px solid #eee;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+        }
+        .testimonial-stars { color: #f39c12; margin-bottom: 12px; font-size: 16px; }
+        .testimonial-text { font-style: italic; color: #444; line-height: 1.7; margin-bottom: 14px; font-size: 15px; }
+        .testimonial-author { font-weight: 700; color: #676767; font-size: 14px; }
+
+        /* === LEAD MAGNET === */
+        .lead-section {
+            background: #676767;
+            color: #ffffff;
+            text-align: center;
+        }
+        .lead-section h2 { color: #ffffff; margin-bottom: 12px; }
+        .lead-section p { opacity: 0.9; margin-bottom: 24px; max-width: 520px; margin-left: auto; margin-right: auto; }
+        .lead-form {
+            display: flex; gap: 10px; max-width: 460px;
+            margin: 0 auto; flex-wrap: wrap; justify-content: center;
+        }
+        .lead-form input {
+            flex: 1; min-width: 220px; padding: 12px 18px;
+            border: 2px solid rgba(255,255,255,0.3); border-radius: 8px;
+            font-size: 15px; background: rgba(255,255,255,0.1);
+            color: #ffffff; outline: none;
+        }
+        .lead-form input::placeholder { color: rgba(255,255,255,0.6); }
+        .lead-form input:focus { border-color: rgba(255,255,255,0.6); background: rgba(255,255,255,0.15); }
+        .lead-form button {
+            background: #fff; color: #676767;
+            padding: 12px 28px; border: none;
+            border-radius: 8px;
+            font-size: 15px; font-weight: 700;
+            cursor: pointer; transition: transform 0.15s;
+        }
+        .lead-form button:hover { transform: translateY(-1px); }
+
+        /* === FINAL CTA === */
+        .final-section { text-align: center; background: #eff6f8; }
+        .final-section h2 { margin-bottom: 14px; }
+        .final-section p { color: #555; margin-bottom: 24px; max-width: 560px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+        .final-btn {
+            display: inline-block;
+            background: #676767; color: #ffffff;
+            padding: 16px 44px; border-radius: 8px;
+            font-size: 18px; font-weight: 700;
+            text-decoration: none; transition: all 0.2s;
+        }
+        .final-btn:hover { background: #525252; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+        /* final phone removed */
+
+        /* === FOOTER === */
+        footer {
+            background: #676767;
+            color: rgba(255,255,255,0.7);
+            padding: 36px 0 20px;
+            font-size: 13px;
+        }
+        .footer-inner {
+            display: flex; justify-content: space-between;
+            align-items: flex-start; flex-wrap: wrap; gap: 20px;
+        }
+        .footer-logo { height: 36px; margin-bottom: 10px; filter: brightness(0) invert(1); opacity: 0.8; }
+        .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; margin-right: 16px; font-size: 13px; }
+        .footer-links a:hover { color: #fff; }
+        .footer-disclaimer {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin-top: 20px; padding-top: 16px;
+            font-size: 11px; color: rgba(255,255,255,0.4);
+            line-height: 1.7;
+        }
+        .footer-disclaimer a { color: rgba(255,255,255,0.5); }
+
+        /* === CRISIS BANNER === */
+        .crisis { background: #b71c1c; color: #fff; text-align: center; padding: 8px; font-size: 13px; }
+        .crisis a { color: #fff; font-weight: 700; }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 768px) {
+            .hero { padding: 48px 0; }
+            .quiz-body { padding: 24px 18px; }
+            section { padding: 40px 0; }
+            /* mobile adjustments */
+            .hero-checks { flex-direction: column; gap: 8px; }
+        }
+
+        /* a11y */
+        .quiz-option:focus-visible, .quiz-cb-item:focus-visible {
+            outline: 3px solid #676767;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="crisis">
+        If you or someone you know is in crisis, call <strong>SAMHSA: <a href="tel:1-800-662-4357">1-800-662-4357</a></strong> (free, confidential, 24/7)
+    </div>
+
+    <header>
+        <div class="container header-inner">
+            <img src="https://res.cloudinary.com/djox322kc/image/upload/q_auto:best,w_800/v1773205101/cz7cf55mebesnwjjbhf1.png" alt="The Ranch" class="logo" onerror="this.parentElement.insertBefore(document.createRange().createContextualFragment('<span style=\'font-size:22px;font-weight:700;color:#676767\'>The Ranch</span>'),this);this.remove();">
+            <a href="#quiz-section" class="header-cta">Start Your Free Assessment</a>
+        </div>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-inner">
+                <h1>Take the First Step Toward Recovery</h1>
+                <p class="subtitle">Confidential, compassionate care tailored to your needs</p>
+                <a href="#quiz-section" class="hero-cta">Start Your Free Assessment</a>
+                <div class="hero-checks">
+                    <div class="hero-check">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                        Evidence-Based Treatment
+                    </div>
+                    <div class="hero-check">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                        100% Confidential
+                    </div>
+                    <div class="hero-check">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                        Insurance Accepted
+                    </div>
+                    <div class="hero-check">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                        Free Assessment
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-items">
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="#676767" stroke="none"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                    HIPAA Compliant
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="#676767" stroke="none"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                    Licensed &amp; Accredited
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="#676767" stroke="none"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                    24/7 Support
+                </div>
+                <div class="trust-item">
+                    <svg viewBox="0 0 24 24" fill="#676767" stroke="none"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                    Expert Clinical Team
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="pain-section">
+        <div class="container">
+            <p class="section-label">We Understand</p>
+            <h2 class="section-heading">You Are Not Alone in This</h2>
+            <p class="section-subtext">Many people seeking treatment share the same concerns. Our assessment helps you find clarity and the right path forward.</p>
+            <div class="pain-grid">
+                
+                <div class="pain-item">
+                    <svg class="pain-check" viewBox="0 0 24 24" fill="none" stroke="#676767" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    <p>Not knowing which treatment program is right for your situation</p>
+                </div>
+                <div class="pain-item">
+                    <svg class="pain-check" viewBox="0 0 24 24" fill="none" stroke="#676767" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    <p>Fear and anxiety about what the treatment process will be like</p>
+                </div>
+                <div class="pain-item">
+                    <svg class="pain-check" viewBox="0 0 24 24" fill="none" stroke="#676767" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    <p>Uncertainty about cost, insurance coverage, and financial options</p>
+                </div>
+                <div class="pain-item">
+                    <svg class="pain-check" viewBox="0 0 24 24" fill="none" stroke="#676767" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+                    <p>Worry about privacy, stigma, and taking time away from responsibilities</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quiz-section" id="quiz-section">
+        <div class="container section-center">
+            <p class="section-label">Free Assessment</p>
+            <h2 class="section-heading">Find Your Path to Recovery</h2>
+            <p class="section-subtext">Answer a few confidential questions to receive a personalized treatment recommendation.</p>
+            <div class="quiz-container" id="quiz-container">
+                <div class="quiz-progress"><div class="quiz-progress-fill" id="progress-fill"></div></div>
+                <div class="quiz-body" id="quiz-body"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services-section">
+        <div class="container">
+            <p class="section-label">Programs</p>
+            <h2 class="section-heading">Treatment Programs at The Ranch</h2>
+            <p class="section-subtext">Comprehensive, evidence-based programs tailored to your unique needs.</p>
+            <div class="services-grid">
+            <div class="service-card">
+                <h3>Medical Detox</h3>
+                <p>Medically supervised withdrawal management in a safe, comfortable environment.</p>
+                <a href="#quiz-section" class="service-link">Learn if this is right for you &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Inpatient Rehab</h3>
+                <p>Immersive residential treatment with 24/7 clinical support.</p>
+                <a href="#quiz-section" class="service-link">Learn if this is right for you &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Outpatient Programs</h3>
+                <p>Flexible treatment that fits your schedule while you maintain daily life.</p>
+                <a href="#quiz-section" class="service-link">Learn if this is right for you &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Dual-Diagnosis Treatment</h3>
+                <p>Integrated care for addiction and co-occurring mental health conditions.</p>
+                <a href="#quiz-section" class="service-link">Learn if this is right for you &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Family Counseling</h3>
+                <p>Rebuilding relationships and creating a supportive recovery environment.</p>
+                <a href="#quiz-section" class="service-link">Learn if this is right for you &rarr;</a>
+            </div>
+            <div class="service-card">
+                <h3>Aftercare &amp; Alumni</h3>
+                <p>Ongoing support to maintain your recovery long after treatment ends.</p>
+                <a href="#quiz-section" class="service-link">Learn if this is right for you &rarr;</a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container section-center">
+            <p class="section-label">Testimonials</p>
+            <h2 class="section-heading">Stories of Recovery</h2>
+            <p class="section-subtext">Hear from those who have walked this path and found hope.</p>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"I was terrified to ask for help, but the team made me feel safe from day one. The personalized plan addressed not just my addiction but the underlying issues I had been avoiding."</p>
+                    <div class="testimonial-author">Sarah M. &mdash; 2 Years in Recovery</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"After multiple failed attempts elsewhere, I finally found a program that understood my needs. The aftercare support has been incredible for maintaining my sobriety."</p>
+                    <div class="testimonial-author">Michael R. &mdash; 14 Months Sober</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"The family counseling changed everything for us. My son got the help he needed, and we learned how to support his recovery together."</p>
+                    <div class="testimonial-author">Linda T. &mdash; Family Member</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="lead-section">
+        <div class="container">
+            <h2>Download Our Free Recovery Guide</h2>
+            <p>Understand your options, know what to expect, and take the first step with confidence.</p>
+            <form class="lead-form" onsubmit="handleLead(event)">
+                <input type="email" placeholder="Your email address" required aria-label="Email">
+                <button type="submit">Get Free Guide</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="final-section">
+        <div class="container">
+            <h2>Recovery Is Possible. Start Today.</h2>
+            <p>Our compassionate admissions team is ready to help you find the right treatment path &mdash; confidentially and without obligation.</p>
+            <a href="#quiz-section" class="final-btn">Get Help Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div>
+                    <img src="https://res.cloudinary.com/djox322kc/image/upload/q_auto:best,w_800/v1773205101/cz7cf55mebesnwjjbhf1.png" alt="The Ranch" class="footer-logo" onerror="this.style.display='none'">
+                    <p>The Ranch</p>
+                </div>
+                <div class="footer-links">
+                    <a href="recoveryranch.com">Website</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms</a>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <strong>Disclaimer:</strong> This assessment is for informational purposes only and does not constitute medical advice, diagnosis, or treatment.
+                Always seek the advice of a qualified healthcare provider. If you are experiencing a medical emergency, call 911.
+                This website does not collect personal health information without explicit consent. All interactions are confidential.
+                Results are educational and intended to guide you toward appropriate resources.<br>
+                &copy; The Ranch &bull; SAMHSA Helpline: <a href="tel:1-800-662-4357">1-800-662-4357</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    (function(){
+        const Q=[
+            {id:1,text:"What brings you here today?",type:"s",opts:[
+                {v:"myself",t:"I am seeking help for myself",w:{h:1,w:1,c:0}},
+                {v:"loved",t:"I am seeking help for a loved one",w:{h:0,w:1,c:0}},
+                {v:"research",t:"I am researching treatment options",w:{h:0,w:0,c:2}}
+            ]},
+            {id:2,text:"What substance(s) are you most concerned about?",type:"m",opts:[
+                {v:"alcohol",t:"Alcohol"},{v:"opioids",t:"Opioids / Heroin"},
+                {v:"rx",t:"Prescription Medications"},{v:"cocaine",t:"Cocaine / Stimulants"},
+                {v:"meth",t:"Methamphetamine"},{v:"multi",t:"Multiple Substances"},
+                {v:"other",t:"Other"}
+            ],mw:{h:1}},
+            {id:3,text:"How often is the substance being used?",type:"s",opts:[
+                {v:"daily",t:"Daily or almost daily",w:{h:3,w:0,c:0}},
+                {v:"several",t:"Several times per week",w:{h:1,w:2,c:0}},
+                {v:"occ",t:"Occasionally",w:{h:0,w:1,c:1}},
+                {v:"quit",t:"Currently trying to quit",w:{h:2,w:1,c:0}}
+            ]},
+            {id:4,text:"Have withdrawal symptoms been experienced when not using?",type:"s",opts:[
+                {v:"severe",t:"Yes, severe (shaking, seizures, hallucinations)",w:{h:4,w:0,c:0}},
+                {v:"mod",t:"Yes, moderate (nausea, anxiety, insomnia)",w:{h:2,w:1,c:0}},
+                {v:"mild",t:"Yes, but mild",w:{h:0,w:2,c:0}},
+                {v:"none",t:"No withdrawal symptoms",w:{h:0,w:0,c:1}}
+            ]},
+            {id:5,text:"Has treatment been attempted before?",type:"s",opts:[
+                {v:"multi",t:"Yes, multiple times",w:{h:3,w:1,c:0}},
+                {v:"once",t:"Yes, once",w:{h:1,w:2,c:0}},
+                {v:"never",t:"No, this would be the first time",w:{h:0,w:0,c:2}}
+            ]},
+            {id:6,text:"What best describes the current living situation?",type:"s",opts:[
+                {v:"stable",t:"Stable, supportive home",w:{h:0,w:0,c:1}},
+                {v:"unstable",t:"Unstable or unsafe housing",w:{h:3,w:1,c:0}},
+                {v:"users",t:"Living with others who actively use",w:{h:3,w:1,c:0}},
+                {v:"alone",t:"Living alone with limited support",w:{h:1,w:2,c:0}}
+            ]},
+            {id:7,text:"Are there co-occurring mental health concerns?",type:"m",opts:[
+                {v:"dep",t:"Depression"},{v:"anx",t:"Anxiety"},
+                {v:"bpd",t:"Bipolar Disorder"},{v:"ptsd",t:"PTSD / Trauma"},
+                {v:"pain",t:"Chronic Pain"},{v:"none",t:"None of the above"}
+            ],mw:{h:1,w:1}},
+            {id:8,text:"What is the biggest concern about seeking treatment?",type:"s",opts:[
+                {v:"cost",t:"Cost and insurance coverage",w:{h:0,w:2,c:1}},
+                {v:"time",t:"Taking time off work or responsibilities",w:{h:0,w:1,c:1}},
+                {v:"detox",t:"Safety during detox and withdrawal",w:{h:3,w:1,c:0}},
+                {v:"prog",t:"Finding the right program",w:{h:0,w:2,c:1}},
+                {v:"stigma",t:"Privacy and stigma concerns",w:{h:0,w:1,c:1}}
+            ]},
+            {id:9,text:"How urgently is help needed?",type:"s",opts:[
+                {v:"now",t:"Immediately — today or tomorrow",w:{h:4,w:0,c:0}},
+                {v:"week",t:"Within the next week",w:{h:1,w:3,c:0}},
+                {v:"month",t:"Within the next month",w:{h:0,w:1,c:2}},
+                {v:"explore",t:"Just exploring options",w:{h:0,w:0,c:3}}
+            ]},
+            {id:10,text:"What is the current insurance situation?",type:"s",opts:[
+                {v:"private",t:"Private insurance",w:{h:0,w:1,c:0}},
+                {v:"govt",t:"Medicaid / Medicare / Government",w:{h:0,w:1,c:0}},
+                {v:"none",t:"No insurance / Self-pay",w:{h:0,w:1,c:1}},
+                {v:"unsure",t:"Not sure about coverage",w:{h:0,w:2,c:0}}
+            ]},
+            {id:11,text:"What level of support is available from family or friends?",type:"s",opts:[
+                {v:"strong",t:"Strong support system",w:{h:0,w:0,c:1}},
+                {v:"some",t:"Some support, but could be stronger",w:{h:0,w:1,c:0}},
+                {v:"limited",t:"Very limited or no support",w:{h:2,w:1,c:0}}
+            ]},
+            {id:12,text:"Which treatment setting feels most appropriate?",type:"s",opts:[
+                {v:"inp",t:"Residential / Inpatient (live at facility)",w:{h:1,w:1,c:0}},
+                {v:"out",t:"Outpatient (attend sessions, live at home)",w:{h:0,w:1,c:1}},
+                {v:"unsure",t:"Not sure — guidance needed",w:{h:0,w:2,c:0}}
+            ]}
+        ];
+        let cur=0,ans={},sc={h:0,w:0,c:0};
+        const $=id=>document.getElementById(id);
+
+        function render(){
+            const q=Q[cur],tot=Q.length;
+            $('progress-fill').style.width=(cur/tot*100)+'%';
+            let oh='';
+            if(q.type==='s'){
+                oh='<div class="quiz-options">';
+                q.opts.forEach(o=>{
+                    const sel=ans[q.id]===o.v?' selected':'';
+                    oh+='<div class="quiz-option'+sel+'" tabindex="0" data-v="'+o.v+'" onclick="W._sel(this)" onkeydown="W._k(event,this)"><div class="dot"></div><span>'+o.t+'</span></div>';
+                });
+                oh+='</div>';
+            }else{
+                oh='<div class="quiz-cb">';
+                const s=ans[q.id]||[];
+                q.opts.forEach(o=>{
+                    const sel=s.includes(o.v)?' selected':'';
+                    oh+='<div class="quiz-cb-item'+sel+'" tabindex="0" data-v="'+o.v+'" onclick="W._tog(this)" onkeydown="W._k(event,this)"><div class="box"></div><span>'+o.t+'</span></div>';
+                });
+                oh+='</div>';
+            }
+            const has=q.type==='s'?ans[q.id]!==undefined:(ans[q.id]&&ans[q.id].length>0);
+            $('quiz-body').innerHTML='<div class="quiz-step">Question '+(cur+1)+' of '+tot+'</div><h3 class="quiz-question">'+q.text+'</h3>'+oh+'<div class="quiz-nav">'+(cur>0?'<button class="btn btn-back" onclick="W._back()" type="button">Back</button>':'<div></div>')+'<button class="btn btn-next" onclick="W._next()" type="button"'+(has?'':' disabled')+'>'+(cur===tot-1?'See My Results':'Next')+'</button></div>';
+        }
+
+        window.W={
+            _sel(el){ const q=Q[cur]; ans[q.id]=el.dataset.v; render(); },
+            _tog(el){ const q=Q[cur],v=el.dataset.v; if(!ans[q.id])ans[q.id]=[]; const i=ans[q.id].indexOf(v); i>-1?ans[q.id].splice(i,1):ans[q.id].push(v); render(); },
+            _k(e,el){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); el.click(); } },
+            _back(){ if(cur>0){ cur--; render(); } },
+            _next(){
+                const q=Q[cur];
+                if(q.type==='s'){ const o=q.opts.find(x=>x.v===ans[q.id]); if(o&&o.w){ sc.h+=o.w.h||0; sc.w+=o.w.w||0; sc.c+=o.w.c||0; } }
+                else{ const s=ans[q.id]||[]; if(s.length>1&&q.mw){ sc.h+=(q.mw.h||0)*(s.length-1); sc.w+=(q.mw.w||0); } }
+                if(cur<Q.length-1){ cur++; render(); $('quiz-container').scrollIntoView({behavior:'smooth',block:'center'}); }
+                else{ showResult(); }
+            }
+        };
+
+        function showResult(){
+            $('progress-fill').style.width='100%';
+            let p='cold';
+            if(sc.h>=8) p='hot';
+            else if(sc.h>=4||sc.w>=6) p='warm';
+            const R={
+                hot:{b:'badge-hot',bl:'Immediate Support Recommended',h:'You May Benefit from Immediate Medical Support',t:'Based on your responses, a medically supervised program may be the safest path forward. Our clinical team is available now to discuss your options.',cta:'Speak With an Admissions Coordinator',svc:'Recommended: Medical Detox → Inpatient → Aftercare'},
+                warm:{b:'badge-warm',bl:'Clinical Assessment Recommended',h:'A Personalized Treatment Plan Can Help',t:'Your responses suggest that a tailored treatment program could make a real difference. Our team can help you explore the right options.',cta:'Schedule a Free Assessment',svc:'Options: Inpatient, Outpatient, Dual-Diagnosis, Aftercare'},
+                cold:{b:'badge-cold',bl:'Exploring Your Options',h:'Taking the First Step Toward Recovery',t:'It takes courage to start exploring help. Whether you are ready to begin treatment or want to understand your options, we are here.',cta:'Download Our Free Recovery Guide',svc:'Learn about: Outpatient, Support Groups, Family Resources'}
+            };
+            const r=R[p];
+            $('quiz-body').innerHTML='<div class="quiz-result"><span class="result-badge '+r.b+'">'+r.bl+'</span><h2>'+r.h+'</h2><p>'+r.t+'</p><p style="font-size:13px;color:#aaa;margin-bottom:18px">'+r.svc+'</p><a href="recoveryranch.com" target="_blank" class="result-cta">'+r.cta+'</a><p style="font-size:11px;color:#bbb;margin-top:20px">Your responses are confidential. This is not a clinical diagnosis.</p></div>';
+        }
+
+        window.handleLead=function(e){
+            e.preventDefault();
+            e.target.innerHTML='<p style="color:#ffffff;font-size:17px;font-weight:600">Thank you! Check your inbox for your free guide.</p>';
+        };
+
+        render();
+    })();
+    </script>
+</body>
+</html>
